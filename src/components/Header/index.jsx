@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Search from '../Search'
+import Navigation from './Navigation'
 import Badge from '@mui/material/Badge'
 import { styled } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
@@ -21,8 +22,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   return (
-    <header>
-      <div className="top-strip py-2 border-t border-b">
+    <header className="bg-white">
+      <div className="top-strip py-2 border-t-[1px] border-gray-300 border-b-[1px]">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
 
@@ -49,7 +50,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="header py-3">
+      <div className="header py-4 border-b-[1px] border-gray-300">
         <div className="container mx-auto px-4 flex items-center justify-between">
 
           <div className="col1 flex items-center w-[15%]">
@@ -112,8 +113,12 @@ const Header = () => {
 
         </div>
       </div>
+
+        <Navigation/>
+         
+
     </header>
   )
 }
 
-export default Header
+export default Header;
