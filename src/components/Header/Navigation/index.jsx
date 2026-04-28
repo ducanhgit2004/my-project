@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@mui/material';
 import { RiMenu2Fill } from "react-icons/ri";
 import { LiaAngleDownSolid } from "react-icons/lia";
@@ -7,15 +7,25 @@ import { GoRocket } from "react-icons/go";
 import CategoryPanel from './CategoryPanel';
 
 
-
-
 const Navigation = () => {
+
+    const [isOpenCatPanel, setIsOpenCatPanel] = useState(false);
+
+    const openCategoryPanel = () => {
+        setIsOpenCatPanel(true);
+    };
+
+    const closeCategoryPanel = () => {
+        setIsOpenCatPanel(false);
+    };
+
+
   return (
     <>
     <nav className='py-2'>
         <div className="container flex items-center justify-end">
             <div className="col_1 w-[20%]">
-                <Button className="!text-black flex items-center gap-2 font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <Button className="!text-black flex items-center gap-2 font-bold" onClick={openCategoryPanel} style={{ fontFamily: 'Montserrat, sans-serif' }}>
                     <RiMenu2Fill className="text-[18px]" /> <span className="font-bold">Shop By Categories</span>
                     <LiaAngleDownSolid className="text-[13px] ml-auto font-bold" />
                 </Button>
@@ -80,7 +90,7 @@ const Navigation = () => {
         </div>
     </nav>
      
-    <CategoryPanel/> 
+    <CategoryPanel closeCategoryPanel={closeCategoryPanel} isOpenCatPanel={isOpenCatPanel}/> 
     </>
   )
 }
