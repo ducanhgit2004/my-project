@@ -5,6 +5,7 @@ import { LiaAngleDownSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom'
 import { GoRocket } from "react-icons/go";
 import CategoryPanel from './CategoryPanel';
+import "../Navigation/style.css";
 
 
 const Navigation = () => {
