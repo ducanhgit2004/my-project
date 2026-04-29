@@ -1,29 +1,143 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation'
+import { Link } from 'react-router-dom';
 
 import { Navigation } from 'swiper/modules';
 
 const HomeCatSlider = () => {
   return (
     <div className="homeCatSlider">
-      <div className="container">
+      <div className="container py-2">
         <Swiper
         slidesPerView={7}
-        spaceBetween={30}
+        spaceBetween={10}
+        navigation={true}
         modules={[Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+<SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <Link to="/">
+          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
+          ">
+            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
+            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+          </div>
+          </Link>
+        </SwiperSlide>
+          
+        
       </Swiper>
       </div>
     </div>

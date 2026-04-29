@@ -33,6 +33,12 @@ nav ul button:hover {background: none !important;}
   --swiper-navigation-color: #000;
   --swiper-navigation-size: 22px;
 }
+
+.homeCatSlider {
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: 22px;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next ::after{
   display: flex;
@@ -44,3 +50,29 @@ nav ul button:hover {background: none !important;}
   height: 45px;
   min-width: 45px;
 }
+
+.homeCatSlider  .swiper{overflow: inherit !important;}
+
+.homeCatSlider .swiper-button-prev, .homeCatSlider .swiper-button-next{
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+}
+
+
+
+.homeCatSlider .swiper-button-prev:after,.homeCatSlider .swiper-button-next:after{
+  font-size: 16px !important;
+}
+
+.homeCatSlider .swiper-button-prev{
+  left: -20px !important;
+}
+
+.homeCatSlider .swiper-button-next{
+  right: -20px !important;
+}
+
+.homeCatSlider .item{border: 1px solid rgba(0,0,0,0.1);}
+
+.homeCatSlider .item:hover img{transform: scale(1.1);}
