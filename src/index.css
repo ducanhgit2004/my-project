@@ -9,6 +9,14 @@ body{
   color: rgba(0,0,0,0.8);
   overflow-x: hidden;
 }
+
+
+::-webkit-scrollbar{width: 5px !important; height: 10px !important;}
+::-webkit-scrollbar-thumb{background: #ff5252;}
+::-webkit-scrollbar-track{background: #fff;}
+
+
+
 .container{width: 90%; margin: auto;}
 
 header .top-strip{}
@@ -38,6 +46,7 @@ nav ul button:hover {background: none !important;}
   --swiper-navigation-color: #000;
   --swiper-navigation-size: 22px;
 }
+
 
 .swiper-button-prev::after,
 .swiper-button-next ::after{

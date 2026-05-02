@@ -8,10 +8,10 @@ import { Navigation } from 'swiper/modules';
 
 const HomeCatSlider = () => {
   return (
-    <div className="homeCatSlider">
+    <div className="homeCatSlider py-8">
       <div className="container py-2">
         <Swiper
-        slidesPerView={7}
+        slidesPerView={8}
         spaceBetween={10}
         navigation={true}
         modules={[Navigation]}
@@ -97,45 +97,11 @@ const HomeCatSlider = () => {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide>
-        <Link to="/">
-          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
-          ">
-            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
-          </div>
-          </Link>
-        </SwiperSlide>
+      
 
-        <SwiperSlide>
-        <Link to="/">
-          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
-          ">
-            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
-          </div>
-          </Link>
-        </SwiperSlide>
+       
 
-        <SwiperSlide>
-        <Link to="/">
-          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
-          ">
-            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
-          </div>
-          </Link>
-        </SwiperSlide>
-
-        <SwiperSlide>
-        <Link to="/">
-          <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
-          ">
-            <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
-          </div>
-          </Link>
-        </SwiperSlide>
+       
           
         
       </Swiper>
