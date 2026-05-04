@@ -22,7 +22,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Fashion</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -32,7 +32,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Electronics</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -42,7 +42,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Bags</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -52,7 +52,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Footwear</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -62,7 +62,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Groceries</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -72,7 +72,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Beauty</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -82,7 +82,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Wellness</h3>
           </div>
           </Link>
         </SwiperSlide>
@@ -92,7 +92,7 @@ const HomeCatSlider = () => {
           <div className="item py-7 px-3 bg-white rounded-sm text-center flex items-center justify-center flex-col
           ">
             <img src="ipad.jpg" alt="" className="w-[90px] transition-all" />
-            <h3 className="text-[16px] font-[500] mt-3">Smart Tablet</h3>
+            <h3 className="text-[16px] font-[500] mt-3">Jewellery</h3>
           </div>
           </Link>
         </SwiperSlide>

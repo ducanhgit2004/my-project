@@ -60,6 +60,12 @@ nav ul button:hover {background: none !important;}
   min-width: 45px;
 }
 
+
+.smlBtn .swiper-button-prev,.smlBtn .swiper-button-next {width: 30px !important; height: 30px; min-width: 30px !important;
+top:55% !important; color: #000; font-size: 10px;}
+
+
+
 .homeCatSlider  .swiper{overflow: inherit !important;}
 
 .homeCatSlider .swiper-button-prev, .homeCatSlider .swiper-button-next{
@@ -85,3 +91,6 @@ nav ul button:hover {background: none !important;}
 .homeCatSlider .item{border: 1px solid rgba(0,0,0,0.1);}
 
 .homeCatSlider .item:hover img{transform: scale(1.1);}
+
+.MuiTabs-indicator{background-color: #ff5252 !important;}
+.MuiTab-textColorPrimary.Mui-selected{color:#ff5252 !important;}

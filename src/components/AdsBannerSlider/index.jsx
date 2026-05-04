@@ -14,38 +14,30 @@ const AdsBannerSlider = (props) => {
             spaceBetween={10}
             navigation={true}
             modules={[Navigation]}
-            className="mySwiper"
+            className="smlBtn"
           >
            <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
+                <BannerBox img={'/adidasbanner.jpg'} link={'/'}/>
             </SwiperSlide>   
 
              <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
+                <BannerBox img={'/adidasbanner.jpg'} link={'/'}/>
             </SwiperSlide>
 
              <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
+                <BannerBox img={'/bannernho.jpg'} link={'/'}/>
             </SwiperSlide>
 
              <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
+                <BannerBox img={'/adidasbanner.jpg'} link={'/'}/>
             </SwiperSlide>
 
              <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
+                <BannerBox img={'/adidasbanner.jpg'} link={'/'}/>
             </SwiperSlide>
 
              <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
-            </SwiperSlide>
-
-             <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
-            </SwiperSlide>
-
-             <SwiperSlide>
-                <BannerBox img={'/dealkitchen.gif'}/>
+                <BannerBox img={'/adidasbanner.jpg'} link={'/'}/>
             </SwiperSlide>  
 
 
