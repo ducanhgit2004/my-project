@@ -3,6 +3,7 @@ import HomeSlider from '../../components/HomeSlider'
 import HomeCatSlider from '../../components/HomeCatSlider'
 import AdsBannerSlider from '../../components/AdsBannerSlider'
 import { LiaShippingFastSolid } from "react-icons/lia";
+import ProductsSlider from '../../components/ProductsSlider'
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -53,6 +54,9 @@ const Home = () => {
             </div>
 
           </div>
+
+          <ProductsSlider items={6}/>
+
         </div>
       </section>
 
