@@ -104,3 +104,17 @@ top:55% !important; color: #000; font-size: 10px;}
 footer form input::placeholder{font-size: 14px;}
 
 .MuiFormControlLabel-label{font-size: 13px !important; color: rgba(0,0,0,0.8);}
+
+.swiper-pagination-bullet-active{background: #ff5252 !important;}
+
+.homeSliderV2 .swiper-slide-active .info{right: 0px !important; opacity: 1;}
+
+.homeSliderV2 .swiper-slide-active .info h4{right: 0px !important; opacity: 1;}
+.homeSliderV2 .swiper-slide-active .info h3{right: 0px !important; opacity: 1;}
+.homeSliderV2 .swiper-slide-active .info h2{right: 0px !important; opacity: 1;}
+.homeSliderV2 .swiper-slide-active .info .btn_{right: 0px !important; opacity: 1;}
+
+.homeSliderV2 .info h4{transition-duration: 1.5s;}
+.homeSliderV2 .info h2{transition-duration: 1.9s;}
+.homeSliderV2 .info h3{transition-duration: 1.8s;}
+.homeSliderV2 .info .btn_{transition-duration: 2.1s;}
