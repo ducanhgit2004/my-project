@@ -6,6 +6,7 @@ import { LiaShippingFastSolid } from "react-icons/lia";
 import ProductsSlider from '../../components/ProductsSlider'
 import BlogItem from '../../components/BlogItem'
 import HomeBannerV2 from '../../components/HomeSliderV2'
+import BannerBoxV2 from '../../components/bannerBoxV2'
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -27,12 +28,18 @@ const Home = () => {
   
   return (
     <>
-
+    
+    <HomeSlider/>
 
       <section className='py-6'>
-        <div className="container flex items-center">
-          <div className="part1 w-[75%]">
+        <div className="container flex gap-5">
+          <div className="part1 w-[70%]">
             <HomeBannerV2/>
+          </div>
+
+          <div className="part2 w-[30%] flex items-center gap-5 justify-between flex-col">
+            <BannerBoxV2 info="left" image={'gono.png'}/>
+            <BannerBoxV2 info="right" image={'4rum.png'}/>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Button from '@mui/material/Button';
 
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 
 const HomeBannerV2 = () => {
@@ -20,7 +20,11 @@ const HomeBannerV2 = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[EffectFade, Navigation, Pagination, Autoplay]}
         className="homeSliderV2"
       >
         <SwiperSlide>
@@ -52,7 +56,7 @@ const HomeBannerV2 = () => {
              <div className="info absolute -right-[100%] opacity-0 top-0 w-[50%] h-[100%]
                z-50 p-8 flex items-center flex-col justify-center transition-all duration-700">
                 <h4 className='text-[18px] font-[500] w-full text-left mb-3 relative -right-[100%] opacity-0'>New Golf Season</h4>
-                <h2 className='text-[35px] font-[650] w-full relative -right-[100%] opacity-0'>Jacket Golf ADIDAS</h2>
+                <h2 className='text-[35px] font-[650] w-full relative -right-[100%] opacity-0'>Golf Jacket ADIDAS</h2>
 
                   <h3 className='flex items-center gap-3 text-[18px] font-[500] w-full text-left mt-3 mb-3 relative -right-[100%] opacity-0'>Chỉ từ
                      <span className='text-[#ff5252] text-[30px] font-[700]'>1.899.000 VNĐ</span></h3>
