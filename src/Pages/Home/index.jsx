@@ -7,6 +7,7 @@ import ProductsSlider from '../../components/ProductsSlider'
 import BlogItem from '../../components/BlogItem'
 import HomeBannerV2 from '../../components/HomeSliderV2'
 import BannerBoxV2 from '../../components/bannerBoxV2'
+import AdsBannerSliderV2 from '../../components/AdsBannerSliderV2'
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -102,7 +103,7 @@ const Home = () => {
 
           </div>
 
-         <AdsBannerSlider items={4}/>
+         <AdsBannerSliderV2 items={4}/>
     
 
         </div>

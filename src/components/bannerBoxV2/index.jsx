@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom'
 const BannerBoxV2 = (props) => {
   return (
     <div className='bannerBoxV2 w-full rounded-md overflow-hidden group relative'> 
-      <img src={props.image} alt="Banner" className='w-full transition-all duration-150
-      group-hover:scale-105' />
+      <img src={props.image} alt="Banner" className='w-full h-full object-cover rounded-md transition-all duration-150 group-hover:scale-105' />
 
 
       <div className={`info absolute p-5 top-0 ${props.info === "left" ? "left-0" : "right-0"}
-      w-[50% h-[100%] z-50 flex items-center justify-center flex-col gap-2 
+      w-[50%] h-[100%] z-50 flex items-start justify-center flex-col gap-2 text-left
       ${props.info === "left" ? '' : 'pl-10'}`}
       >
         <h2 className='text-[20px] font-[600]'>Go Pro HERO 4</h2>
