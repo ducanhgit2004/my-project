@@ -17,7 +17,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation'
 import { Navigation } from 'swiper/modules';
-import Footer from '../../components/Footer';
+
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -166,7 +166,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer/>
+    
 
     
 

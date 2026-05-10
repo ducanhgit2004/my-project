@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 import Home from './Pages/Home'
+import ProductListing from "./Pages/ProductListing"
+import Footer from './components/Footer'
 
 function App() {
 
@@ -12,8 +14,10 @@ function App() {
     
       <Header />
       <Routes>
-        <Route path={"/"} exact element={<Home/>}/>
+        <Route path={"/"} exact={true} element={<Home/>}/>
+        <Route path={"/productListing"} exact={true} element={<ProductListing/>}/>
       </Routes>
+        <Footer/>
       </BrowserRouter>
       <h1></h1>
     </>
