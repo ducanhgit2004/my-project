@@ -16,7 +16,7 @@ const ProductItem = () => {
         <Link to="/">
           <div classNme="img h-[220px] overflow-hidden">
               <img 
-              src="/vay1.PNG"
+              src="public/vay1.PNG"
               className="w-full"/>
 
                <img 
