@@ -1,16 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "../../components/Sidebar";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import ProductItem from "../../components/ProductItem";
+import ProductItemListView from "../../components/ProductItemListView";
 import Button from "@mui/material/Button";
 import { IoGridSharp } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Pagination from '@mui/material/Pagination';
 
 const ProductListing = () => {
+  const [itemView, setItemView] = useState('grid');
   const id = React.useId();
   const buttonId = `${id}-button`;
   const menuId = `${id}-menu`;
@@ -23,7 +26,7 @@ const ProductListing = () => {
     setAnchorEl(null);
   };
   return (
-    <section className="py-5">
+    <section className="py-5 pb-0">
       <div className="container">
         <Breadcrumbs aria-label="breadcrumb">
           <Link
@@ -51,20 +54,21 @@ const ProductListing = () => {
           </div>
 
           <div className="rightContent w-[80%]">
-            <div
-              className="bg-[#f1f1f1] p-2 mb-4 w-full rounded-md flex items-center
+            <div className="bg-[#f1f1f1] p-2 mb-4 w-full rounded-md flex items-center
           justify-between"
             >
-              <div className="col1 flex items-center gap-1">
+              <div className="col1 flex items-center gap-1 itemViewActions">
                 <Button
-                  className="!w-[40px] !h-[40px] !min-w-[40px]
-                    !rounded-full !text-[#000] "
+                  className={`!w-[40px] !h-[40px] !min-w-[40px]
+                    !rounded-full !text-[#000] ${itemView === "list" && 'active'}`}
+                    onClick={()=>setItemView('list')}
                 >
                   <LuMenu className="w-[40px] text-[rgba(0,0,0,0.7)]" />
                 </Button>
                 <Button
-                  className="!w-[40px] !h-[40px] !min-w-[40px]
-                    !rounded-full !text-[#000] "
+                  className={`!w-[40px] !h-[40px] !min-w-[40px]
+                    !rounded-full !text-[#000] ${itemView === "grid" && 'active'}`}
+                    onClick={()=>setItemView('grid')}
                 >
                   <IoGridSharp className="text-[rgba(0,0,0,0.7)]" />
                 </Button>
@@ -113,7 +117,13 @@ const ProductListing = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-4 md:grid-cols-4 gap-4">
+            <div className={`grid ${itemView=== 'grid' ? 'grid-cols-4 md:grid-cols-4' : 
+              'grid-cols-1 md:grid-cols-1'} gap-4`}>
+            {
+                itemView ==='grid' ? (
+               <>
+             
+              <ProductItem /> 
               <ProductItem />
               <ProductItem />
               <ProductItem />
@@ -121,7 +131,25 @@ const ProductListing = () => {
               <ProductItem />
               <ProductItem />
               <ProductItem />
-              <ProductItem />
+              </> 
+              
+               )   : (
+
+              <>
+              <ProductItemListView />
+              <ProductItemListView />
+              <ProductItemListView />
+              <ProductItemListView />
+              <ProductItemListView />
+              <ProductItemListView />
+              <ProductItemListView />
+              <ProductItemListView />
+              </>
+            )}
+            </div>
+            
+            <div className="flex items-center justify-center mt-10">
+              <Pagination count={10} showFirstButton showLastButton />
             </div>
           </div>
         </div>
