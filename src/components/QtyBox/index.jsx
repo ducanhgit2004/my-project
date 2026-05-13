@@ -4,6 +4,7 @@ import { FaAngleUp } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
 
 
+
 const QtyBox = () => {
     
     const [qtyVal, setQtyVal] = useState(1);
@@ -29,10 +30,16 @@ const QtyBox = () => {
 
     <div className='flex items-center flex-col justify-between h-[40px] absolute 
     top-0 right-0 z-50'>
-        <Button className='!min-w-[30px] !w-[30px] !h-[20px] !text-[#000] !rounded-none'
-        onClick={plusQty}><FaAngleUp/></Button>
-        <Button className='!min-w-[30px] !w-[30px] !h-[20px] !text-[#000] !rounded-none'
-        onClick={minusQty}><FaAngleDown/></Button>
+        <Button className='!min-w-[25px] !w-[25px] !h-[20px] !text-[#000] !rounded-none
+        hover:!bg-[#f1f1f1]'
+        onClick={plusQty}>
+          <FaAngleUp className='text-[12px]' opacity-55/>
+          </Button>
+        <Button className='!min-w-[25px] !w-[25px] !h-[20px] !text-[#000] !rounded-none
+        hover:!bg-[#f1f1f1]'
+        onClick={minusQty}>
+          <FaAngleDown className='text-[12px]' opacity-55/>
+          </Button>
     </div>
 
     </div>

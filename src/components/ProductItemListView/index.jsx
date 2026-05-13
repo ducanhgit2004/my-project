@@ -14,9 +14,9 @@ const ProductItem = () => {
     <div className="productItem w-full shadow-lg overflow-hidden rounded-md border
      border-[rgba(0,0,0,0.1)] flex items-center">
       
-      <div className="group imgWrapper w-[25%] h-[220px] overflow-hidden rounded-md relative">
+      <div className="group imgWrapper w-[25%] h-[220px] overflow-hidden rounded-md relative ml-4">
         <Link to="/">
-          <div classNme="img h-[220px] overflow-hidden">
+          <div className="img h-[220px] overflow-hidden">
               <img 
               src="/vay1.PNG"
               className="w-full"/>
@@ -52,7 +52,7 @@ const ProductItem = () => {
       </div>
         
       <div className="info p-3 rounded-b-lg py-5 px-8 w-[75%]">
-        <h6 className='text-[15px]'>
+        <h6 className='text-[15px] !font-[400]'>
           <Link to="/" className='link transition-all'>Áo phông</Link>
         </h6>
 

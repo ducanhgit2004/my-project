@@ -50,7 +50,7 @@ const ProductItem = () => {
       </div>
         
       <div className="info p-3 rounded-b-lg py-5">
-        <h6 className='text-[13px]'>
+        <h6 className='text-[13px] !font-[400]'>
           <Link to="/" className='link transition-all'>Áo phông</Link>
         </h6>
 
