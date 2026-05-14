@@ -42,7 +42,7 @@ const Footer = () => {
                    <BsWallet2 className='text-[40px] transition-all duration-300
                     group-hover:text-[#ff5252] group-hover:translate-y-1'/>
                    <h3 className='text-[16px] font-[600] mt-3'>Secured Payment</h3>
-                   <p className='text-[12px] font-[500]'>Secure and Reliable Payment options</p>
+                   <p className='text-[12px] font-[500]'>Secure and Reliable Payment</p>
                 </div>
 
                 <div className="col flex items-center justify-center flex-col group w-[15%]">

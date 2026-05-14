@@ -99,7 +99,7 @@ const Home = () => {
             <p className="mb-0 font-[500]">Free shipping on your first order and over $50.00</p>
           </div>
 
-          <p className="font-bold text-[25px]">- Only $200*</p>
+          <p className="font-bold !text-[25px]">- Only $200*</p>
 
           </div>
 

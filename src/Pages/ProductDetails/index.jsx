@@ -8,6 +8,8 @@ import QtyBox from "../../components/QtyBox";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
+import TextField from '@mui/material/TextField';
+import ProductsSlider from "../../components/ProductsSlider";
 
 
 const ProductDetails = () => {
@@ -62,7 +64,7 @@ const ProductDetails = () => {
                 <ProductZoom/>
             </div>
 
-             <div className="productContent w-[60%] pr-10">
+             <div className="productContent w-[60%] pr-10 pl-10">
               <h1 className="text-[25px] font-[700] mb-2">Quần giả váy xếp ly nhãn hiệu Juno | Quần thời trang
                 cao cấp | Quần nữ
               </h1>
@@ -113,7 +115,7 @@ const ProductDetails = () => {
             </div>
 
 
-          <p className="text-[14px] mt-4 mb-2">FreeShipping (Est. Delivery Time 2-3 Days)</p>
+          <p className="text-[14px] mt-5 mb-2 text-[#000]">FreeShipping (Est. Delivery Time 2-3 Days)</p>
             <div className="flex items-center  gap-4">
               <div className="qtyBoxWrapper w-[70px]">
                 <QtyBox/>
@@ -271,8 +273,8 @@ const ProductDetails = () => {
               <div className="w-full productReviewsContainer">
                 <h2 className="text-[18px]">Customer questions & answers</h2>
 
-                <div className="scroll w-full max-h-[300px] overflow-y-scroll overflow-x-hidden
-                mt-5">
+                <div className="reviewScroll w-full max-h-[300px] overflow-y-scroll overflow-x-hidden
+                mt-5 pr-5">
                   <div className="review pb-5 pt-5 border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
                     <div className="info w-[60%] flex items-center gap-2">
                       <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
@@ -307,16 +309,97 @@ const ProductDetails = () => {
 
                   </div>
 
+                    <div className="review pb-5 pt-5 border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                    <div className="info w-[60%] flex items-center gap-2">
+                      <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                        <img src="/anhatinh.jpg" className="w-full"/>
+                      </div>
+
+                    <div className="w-[80%]">
+                      <h4 className="text-[16px]">hoangtu 29c1</h4>
+                      <h5 className="text-[13px] mb-0">13-5-2025</h5>
+                      <p className="!mt-0 !mb-0">toi noi vay thi ae ok di</p>
+                    </div>
+
+                    </div>
+                    <Rating name="size-small" defaultValue={2} readOnly />
+
+                  </div>
+
+                    <div className="review pb-5 pt-5 border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                    <div className="info w-[60%] flex items-center gap-2">
+                      <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                        <img src="/anhatinh.jpg" className="w-full"/>
+                      </div>
+
+                    <div className="w-[80%]">
+                      <h4 className="text-[16px]">hoangtu 29c1</h4>
+                      <h5 className="text-[13px] mb-0">13-5-2025</h5>
+                      <p className="!mt-0 !mb-0">toi noi vay thi ae ok di</p>
+                    </div>
+
+                    </div>
+                    <Rating name="size-small" defaultValue={2} readOnly />
+
+                  </div>
+
+                    <div className="review pb-5 pt-5 border-b border-[rgba(0,0,0,0.1)] w-full flex items-center justify-between">
+                    <div className="info w-[60%] flex items-center gap-2">
+                      <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                        <img src="/anhatinh.jpg" className="w-full"/>
+                      </div>
+
+                    <div className="w-[80%]">
+                      <h4 className="text-[16px]">hoangtu 29c1</h4>
+                      <h5 className="text-[13px] mb-0">13-5-2025</h5>
+                      <p className="!mt-0 !mb-0">toi noi vay thi ae ok di</p>
+                    </div>
+
+                    </div>
+                    <Rating name="size-small" defaultValue={2} readOnly />
+
+                  </div>
+
 
                  
                 </div>
+
+
+
+                <br/>
+
+                <div className="reviewForm bg-[#fafafa] p-4 rounded-md">
+                  <h2 className="text-[18px]">Add a review</h2>
+                  
+                  <form className="w-full mt-5">
+                       <TextField
+                        id="outlined-multiline-flexible"
+                        label="Write a Review...."
+                        className="w-full"
+                        multiline
+                        rows={5}
+                      />
+                      <br/> <br />
+                      <Rating name="size-small" defaultValue={2}  />
+
+
+                      <div className="flex items-center mt-5">
+                        <Button className="btn-org">Submit Review</Button>
+                      </div>
+                  </form>
+
+                </div>
+
               </div>
             </div>
   )
 }
+       </div>
 
-        
-      </div>
+       <div className="container pt-8">
+         <h2 className="text-[20px] font-[600] pb-0">Related Products</h2>
+          <ProductsSlider items={6}/>
+       </div>
     </section>
     </>
   )
