@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Search from '../Search'
 import Navigation from './Navigation'
@@ -9,6 +9,7 @@ import { MdOutlineShoppingCart } from "react-icons/md"
 import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import Tooltip from '@mui/material/Tooltip';
+import { MyContext } from '../../App'
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -21,6 +22,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }))
 
 const Header = () => {
+
+  const context = useContext(MyContext)
+
   return (
     <header className="bg-white">
       <div className="top-strip py-2 border-t-[1px] border-gray-300 border-b-[1px]">
@@ -69,11 +73,11 @@ const Header = () => {
 
           <div className="col3w-[30%] flex items-center">
             <ul className="flex items-center gap-4 justify-end w-full">
-              <li>
+              <li className='flex items-center gap-2'>
                 <Link to="/login" className="text-[15px] gap-3 font-[500] hover:text-red-500 ">
                   Login
                 </Link>
-                   | 
+                   <span>|</span>
                 <Link to="/register" className="text-[15px] gap-3 font-[500] hover:text-red-500">
                   Register
                 </Link>
@@ -101,7 +105,7 @@ const Header = () => {
 
               <li>
                 <Tooltip title="Shopping Cart">
-                <IconButton aria-label="cart">
+                <IconButton aria-label="cart"  onClick={()=>context.setOpenCartPanel(true)}>
                   <StyledBadge badgeContent={4} color="secondary">
                     <MdOutlineShoppingCart size={24} />
                   </StyledBadge>

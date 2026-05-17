@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../ProductItem/style.css'
 import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating'
@@ -6,15 +6,19 @@ import Button from '@mui/material/Button'
 import { FaRegHeart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 import { MdZoomOutMap } from "react-icons/md";
+import { MyContext } from '../../App'
 
 
 const ProductItem = () => {
+
+  const context = useContext(MyContext);
+
   return (
     <div className="productItem w-full shadow-lg overflow-hidden rounded-md border border-[rgba(0,0,0,0.1)]">
       
       <div className="group imgWrapper w-full h-[220px] overflow-hidden rounded-md relative">
-        <Link to="/">
-          <div classNme="img h-[220px] overflow-hidden">
+        <Link to="/product/84758">
+          <div className="img h-[220px] overflow-hidden">
               <img 
               src="/vay1.PNG"
               className="w-full"/>
@@ -32,7 +36,9 @@ const ProductItem = () => {
         <div className="actions absolute top-[-200px] right-[15px] z-50 flex items-center 
         gap-2 flex-col w-[50px] transition-all duration-300 group-hover:top-[15px] opacity-0 group-hover:opacity-100">          
             <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black
-            hover:!bg-[#ff5252] hover:text-white group">
+            hover:!bg-[#ff5252] hover:text-white group" onClick={()=>context.
+              setOpenProductDetailsModal(true)
+            }>
               <MdZoomOutMap className='text-[18px] !text-black group-hover:text-white hover:!text-white'/>
             </Button>
 
@@ -54,7 +60,7 @@ const ProductItem = () => {
           <Link to="/" className='link transition-all'>Áo phông</Link>
         </h6>
 
-        <h3 className='text-[13px] title mt-2 font-[500] mb-1 text-[#000]'>
+        <h3 className='text-[14px] title mt-1 font-[500] mb-1 text-[#000]'>
           <Link to="/" className='link transition-all'>
             Áo thun ngắn tay có cổ phong cách thể thao
           </Link>

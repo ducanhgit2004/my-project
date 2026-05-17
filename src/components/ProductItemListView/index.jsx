@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import '../ProductItem/style.css'
 import { Link } from 'react-router-dom'
 import Rating from '@mui/material/Rating'
@@ -7,9 +7,13 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 import { MdZoomOutMap } from "react-icons/md";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { MyContext } from '../../App'
 
 
 const ProductItem = () => {
+
+  
+  const context = useContext(MyContext);
   return (
     <div className="productItem w-full shadow-lg overflow-hidden rounded-md border
      border-[rgba(0,0,0,0.1)] flex items-center">
@@ -34,12 +38,14 @@ const ProductItem = () => {
         <div className="actions absolute top-[-200px] right-[15px] z-50 flex items-center 
         gap-2 flex-col w-[50px] transition-all duration-300 group-hover:top-[15px] opacity-0 group-hover:opacity-100">          
             <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black
-            hover:!bg-[#ff5252] hover:text-white group">
+            hover:!bg-[#ff5252] hover:text-white group" onClick={()=>context.
+              setOpenProductDetailsModal(true)
+            }>
               <MdZoomOutMap className='text-[18px] !text-black group-hover:text-white hover:!text-white'/>
             </Button>
 
           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black
-          hover:!bg-[#ff5252] hover:text-white group">
+          hover:!bg-[#ff5252] hover:text-white group ">
             <IoIosGitCompare className='text-[18px] !text-black group-hover:text-white hover:!text-white'/>
           </Button>
 
