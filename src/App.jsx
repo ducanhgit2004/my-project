@@ -19,6 +19,7 @@ import DialogContent from '@mui/material/DialogContent'
 import Drawer from '@mui/material/Drawer'
 
 import { IoCloseSharp } from 'react-icons/io5'
+import CartPage from './Pages/Cart'
 
 const MyContext = createContext()
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
 
         <Footer />
