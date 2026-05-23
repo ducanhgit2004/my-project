@@ -1,47 +1,66 @@
-import React, { useState, createContext } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
+import React, { useState, createContext } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
 
-import Header from './components/Header'
-import Home from './Pages/Home'
-import ProductListing from './Pages/ProductListing'
-import Footer from './components/Footer'
-import ProductDetails from './Pages/ProductDetails'
-import ProductZoom from './components/ProductZoom'
-import ProductDetailsComponent from './components/ProductDetails'
-import Login from './Pages/Home/Login'
-import Register from './Pages/Home/Register'
-import CartPanel from './components/CartPanel'
+import Header from "./components/Header";
+import Home from "./Pages/Home";
+import ProductListing from "./Pages/ProductListing";
+import Footer from "./components/Footer";
+import ProductDetails from "./Pages/ProductDetails";
+import ProductZoom from "./components/ProductZoom";
+import ProductDetailsComponent from "./components/ProductDetails";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import CartPanel from "./components/CartPanel";
 
-import Button from '@mui/material/Button'
-import Dialog from '@mui/material/Dialog'
-import DialogContent from '@mui/material/DialogContent'
-import Drawer from '@mui/material/Drawer'
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import Drawer from "@mui/material/Drawer";
 
-import { IoCloseSharp } from 'react-icons/io5'
-import CartPage from './Pages/Cart'
+import { IoCloseSharp } from "react-icons/io5";
+import CartPage from "./Pages/Cart";
+import Verify from "./Pages/Verify";
+import ForgotPassword from "./Pages/ForgotPassword";
 
-const MyContext = createContext()
+import toast, { Toaster } from "react-hot-toast";
+import Checkout from "./Pages/Checkout";
+import MyAccount from "./Pages/MyAccount";
+
+const MyContext = createContext();
 
 function App() {
-  const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false)
-  const [openCartPanel, setOpenCartPanel] = useState(false)
+  const [openProductDetailsModal, setOpenProductDetailsModal] = useState(false);
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
-  const [maxWidth] = useState('xl')
-  const [fullWidth] = useState(true)
+  const [maxWidth] = useState("xl");
+  const [fullWidth] = useState(true);
+  const [isLogin, setIsLogin] = useState(true);
 
   const handleCloseProductDetailsModal = () => {
-    setOpenProductDetailsModal(false)
-  }
+    setOpenProductDetailsModal(false);
+  };
 
   const toggleCartPanel = (newOpen) => () => {
-    setOpenCartPanel(newOpen)
-  }
+    setOpenCartPanel(newOpen);
+  };
+
+  const openAlertBox = (status, msg) => {
+    if (status === "success") {
+      toast.success(msg);
+    }
+    if (status === "error") {
+      toast.error(msg);
+    }
+  };
 
   const values = {
     setOpenProductDetailsModal,
     setOpenCartPanel,
-  }
+    openAlertBox,
+    isLogin,
+    setIsLogin,
+  };
 
   return (
     <BrowserRouter>
@@ -55,9 +74,15 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/verify" element={<Verify />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/my-account" element={<MyAccount />} />
         </Routes>
 
         <Footer />
+
+        <Toaster />
 
         <Dialog
           open={openProductDetailsModal}
@@ -92,8 +117,10 @@ function App() {
           anchor="right"
           className="cartPanel"
         >
-          <div className="flex items-center justify-between py-3 px-4 gap-3 border-b
-           border-[rgba(51,51,51,0.1)] overflow-hidden">
+          <div
+            className="flex items-center justify-between py-3 px-4 gap-3 border-b
+           border-[rgba(51,51,51,0.1)] overflow-hidden"
+          >
             <h4>Shopping Cart (1)</h4>
 
             <IoCloseSharp
@@ -106,8 +133,8 @@ function App() {
         </Drawer>
       </MyContext.Provider>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
-export { MyContext }
+export default App;
+export { MyContext };
